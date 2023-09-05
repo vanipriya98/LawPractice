@@ -1,0 +1,50 @@
+.video-player-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba($color: #c7c7c7, $alpha: 1.0);
+
+    video {
+        box-sizing: border-box;
+        height: 540px;
+        aspect-ratio: 16/9;
+    }
+
+    .controls {
+        position: absolute;
+        bottom: 40px;
+        width: 100%;
+        display: flex;
+
+        opacity: 0.2;
+        transition: opacity 0.4s;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        .timeline {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            border: none;
+           
+            .bar {
+                background: rgb(231, 12, 37);
+                height: 4px;
+                flex: 1;
+                
+                .inner {
+                  background: #e4d90b;
+                  width: 0%;
+                  height: 100%;
+                }
+              }
+        }
+    }
+
+   
+
+   
+}

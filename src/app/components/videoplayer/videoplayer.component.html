@@ -1,0 +1,21 @@
+<div class="video-player-container">
+  <video #videoElement (timeupdate)="updateProgress()" (click)="togglePlay()">
+    <source src="{{ url }}" type="video/mp4" />
+  </video>
+  <div class="controls">
+    <div class="timeline">
+      <div class="bar">
+        <div class="inner"></div>
+      </div>
+    </div>
+    <button mat-icon-button (click)="togglePlay()">
+      <mat-icon>{{ isPlaying ? "pause" : "play_arrow" }}</mat-icon>
+    </button>
+    <button mat-icon-button (click)="rewind()">
+      <mat-icon>replay_5</mat-icon>
+    </button>
+    <button mat-icon-button (click)="fastForward()">
+        <mat-icon>forward_5</mat-icon>
+      </button>
+  </div>
+</div>

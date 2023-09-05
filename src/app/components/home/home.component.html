@@ -1,0 +1,26 @@
+<div class="home">
+  <div class="flex-container">
+    <div class="content">
+      
+        <div class="video-container flex-container">
+            <app-videoplayer></app-videoplayer>
+            <button class="open-sidebar">Open</button>
+        </div>
+      <div class="side-bar">
+            <button class="close-sidebar">Close</button>
+        </div>
+        
+        <div class="video-info-container flex-container">
+          <div><a routerLink="/home/coursecontent" class="coursecontent video-info">Course Content</a></div>
+          <div><a routerLink="/home/documents" class="documents video-info">Documents</a> </div>
+          <div><a routerLink="/home/exams" class="exams video-info">Exams</a></div>
+          <div><a routerLink="/home/certificate" class="certificate video-info">certificate</a></div>
+          <div><a routerLink="/home/rating" class="rating video-info">Rating</a></div>
+        </div>
+        <!-- <div><app-course-content></app-course-content></div> -->
+        
+    </div>
+   
+  </div>
+  <router-outlet></router-outlet>
+</div>

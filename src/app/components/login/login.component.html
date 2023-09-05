@@ -1,0 +1,28 @@
+
+<div fxLayout="row" fxLayoutAlign="center center" class="center-container">
+   
+    <div class="form-container">
+        <h2 id="law-title" >Log in to your account</h2>
+      <form class="example-form" [formGroup]="loginForm">
+        <mat-form-field floatLabel='never'>
+          <input matInput placeholder="First Name">
+        </mat-form-field>
+
+
+
+        <mat-form-field class="form-input" appearance="fill">
+          <input matInput placeholder="Email"   formControlName="email" required>
+        </mat-form-field>
+        <div *ngIf="loginForm.get('email').touched && loginForm.get('email').hasError('required')">Email required</div>
+        <div *ngIf="loginForm.get('email').touched && loginForm.get('email').errors?.pattern">Enter a valid email</div>
+        <mat-form-field class="form-input" appearance="outline">
+          <input matInput type="password" placeholder="Password"   formControlName="password" required>
+        </mat-form-field>
+        <div *ngIf="loginForm.get('password').touched && loginForm.get('password').hasError('required')">Password required</div>
+    
+        <button mat-raised-button color="primary" (click)="login()">Login</button>
+      </form>
+      <h4 id="redirectToSignUp">Don't have an account? Sign up</h4>
+    </div>
+  </div>
+  

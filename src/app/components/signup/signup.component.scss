@@ -1,0 +1,38 @@
+.center-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    .form-container {
+      max-width: 400px;
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+      .form-input {
+        width: 350px;
+        height: 60px;
+        margin-bottom: 20px;
+       
+      }
+      button{
+        width:350px;
+      }
+      #redirectToLogin{
+        margin-top:1rem;
+        text-align: center;
+      }
+      #checkBox{
+        width:200px;
+        
+        
+      }
+  
+      
+    }
+  }
+  

@@ -1,0 +1,66 @@
+.home{
+  position: relative;
+}
+
+.flex-container{
+  display: flex;
+}
+.content{
+  width: 75%;
+  margin-left: auto;
+}
+
+.has-sidebar{
+  width: 75%;
+}
+.video-container{
+  background: dodgerblue;
+  position: relative;
+}
+.video-info-container{
+  height: 50px;
+  background: rgb(207, 184, 176);
+ align-items: center;
+ position: relative;
+
+}
+
+app-video-player{
+  flex: 1;
+}
+.side-bar{
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: yellowgreen;
+}
+.open-sidebar{
+  position: absolute;
+  right: 0;
+  display: none;
+  top: 20px;
+  border: none;
+  padding: 16px 32px;
+  outline: none;
+  background: black;
+  color: white;
+}
+.close-sidebar{
+  float: right;
+  border: none;
+  padding: 16px 32px;
+  outline: none;
+  background: black;
+  color: white;
+}
+.sticky {
+position: fixed;
+top: 0;
+}
+.video-info-container{
+  display: flex;
+  width:75%;
+  justify-content: space-around;
+}

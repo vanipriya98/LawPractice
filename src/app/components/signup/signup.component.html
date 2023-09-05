@@ -1,0 +1,30 @@
+
+<div fxLayout="row" fxLayoutAlign="center center" class="center-container">
+   
+    <div class="form-container">
+        <h2 id="law-title" >Sign up and start learning</h2>
+      <form class="example-form" [formGroup]="signUpForm">
+        <mat-form-field class="form-input" appearance="outline">
+          <input matInput placeholder="Full Name"  formControlName="Fullname" required>
+        </mat-form-field>
+        <div *ngIf="signUpForm.get('Fullname').touched && signUpForm.get('Fullname').hasError('required')">Full Name required</div>
+        <div *ngIf="signUpForm.get('Fullname').touched && signUpForm.get('Fullname').errors?.minlength">minimum 2 characters required </div>
+        <mat-form-field class="form-input" appearance="outline">
+          <input matInput placeholder="Email"   formControlName="email" required>
+        </mat-form-field>
+        <div *ngIf="signUpForm.get('email').touched && signUpForm.get('email').hasError('required')">Email required</div>
+        <div *ngIf="signUpForm.get('email').touched && signUpForm.get('email').errors?.pattern">Enter a valid email</div>
+        <mat-form-field class="form-input" appearance="outline">
+          <input matInput type="password" placeholder="Password"   formControlName="password" required>
+        </mat-form-field>
+        <div *ngIf="signUpForm.get('password').touched && signUpForm.get('password').hasError('required')">Password required</div>
+        <div *ngIf="signUpForm.get('password').touched && signUpForm.get('password').errors?.minlength">Password should have minimum 6 characters</div>
+        <mat-checkbox id="checkBox">
+           Agree Terms & Conditions
+        </mat-checkbox>
+        <button mat-raised-button color="primary" (click)="signup()">Sign up</button>
+      </form>
+      <h4 id="redirectToLogin">Already have an account? Log in</h4>
+    </div>
+  </div>
+  
